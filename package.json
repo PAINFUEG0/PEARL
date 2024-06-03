@@ -1,0 +1,58 @@
+{
+  "name": "pearl",
+  "type": "module",
+  "engine": ">=20.x.x",
+  "author": "Painfuego",
+  "version": "1.0.0-alpha",
+  "main": "./dist/index.js",
+  "license": "CC BY-NC-SA 4.0",
+  "description": "A discord.js handler/base",
+  "repository": {
+    "type": "git",
+    "homepage": "https://github.com/PAINFUEG0/PEARL"
+  },
+  "bugs": {
+    "email": "support@codes-for.fun.com",
+    "url": "https://github.com/PAINFUEG0/PEARL/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@types/lodash": "^4.17.0",
+    "@types/moment-duration-format": "^2.2.6",
+    "@types/node": "20.11.5",
+    "@types/os-utils": "^0.0.4",
+    "@types/readline-sync": "^1.4.8",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "rimraf": "^5.0.7",
+    "typescript": "~5.4.3",
+    "typescript-eslint": "^7.10.0"
+  },
+  "dependencies": {
+    "@joshdb/core": "^1.2.7",
+    "@joshdb/json": "^1.0.5",
+    "@sapphire/ratelimits": "^2.4.9",
+    "@types/archiver": "^6.0.2",
+    "archiver": "^7.0.1",
+    "chalk": "^4.0.0",
+    "discord-api-types": "^0.37.83",
+    "discord-hybrid-sharding": "^2.1.9",
+    "discord.js": "^14.15.2",
+    "dotenv": "^16.4.5",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "moment-duration-format": "^2.3.2",
+    "moment-timezone": "^0.5.45",
+    "node-fetch": "^3.3.2",
+    "os-utils": "^0.0.14",
+    "readline-sync": "^1.4.10"
+  },
+  "scripts": {
+    "start": "node .",
+    "lint": "eslint .",
+    "build": "rimraf dist && tsc",
+    "format": "prettier --log-level error --write .",
+    "dev": "npm run lint && npm run build && npm start",
+    "deploy": "npm install --legacy-peer-deps && npm run build && npm start"
+  }
+}

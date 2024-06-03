@@ -1,0 +1,17 @@
+# @format
+
+{
+  "semi": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": "lf",
+  "printWidth": 100,
+  "singleQuote": true,
+  "insertPragma": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "experimentalTernaries": true,
+  "embeddedLanguageFormatting": "off",
+  "$schema": "https://json.schemastore.org/prettierrc",
+}

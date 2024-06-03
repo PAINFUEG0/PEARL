@@ -1,0 +1,14 @@
+{
+  "name": "pearl",
+  "language": "en",
+  "author": "Painfuego",
+  "version": "1.0.0-alpha",
+  "maintainer": "Painfuego",
+  "checksum": "21_N-2K021-ST",
+  "license": "CC BY-NC-SA 4.0",
+  "description": "A discord.js handler/base",
+  "contact_discord": "https://codes-for.fun",
+  "homepage": "https://github.com/PAINFUEG0/PEARL",
+  "contact_email": "mailto:https://support@codes-for.fun",
+  "intended_use": "For educational and demonstration purposes."
+}

@@ -1,0 +1,16 @@
+{
+  "token": "",
+  "prefix": "",
+
+  "links": {
+    "support": ""
+  },
+  "admins": [],
+  "owners": [],
+  "color": "",
+  "webhooks": {
+    "blLogs": "",
+    "cmdLogs": "",
+    "guildLogs": ""
+  }
+}

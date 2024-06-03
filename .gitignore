@@ -1,0 +1,6 @@
+.env
+/dist
+vow.json
+binding.eps
+/node_modules
+/database-storage

@@ -17,10 +17,10 @@ const event: keyof Events = 'guildDelete';
 export default class GuildDeleteEvent implements Event<typeof event> {
   name = event;
 
-  async execute(client: ExtendedClient, guild: Guild) {
-    if (!guild) return;
+  execute = async (client: ExtendedClient, guild: Guild) => {
+    if (!guild?.name) return;
 
-    const owner = await guild.fetchOwner({ force: true }).catch(() => null);
+    const owner = await client.users.fetch(guild.ownerId, { force: true }).catch(() => null);
 
     await owner
       ?.send({
@@ -57,13 +57,13 @@ export default class GuildDeleteEvent implements Event<typeof event> {
             `${client.emoji.warn} \`Left a guild (${moment().tz('Asia/Kolkata')})\`\n\n` +
               `${client.emoji.info} \`${guild.name}\`\n` +
               `${client.emoji.info} \`GuildId : ${guild.id}\`\n` +
-              `${client.emoji.info} \`Owner : ${owner?.user.displayName}\`\n` +
+              `${client.emoji.info} \`Owner : ${owner?.displayName}\`\n` +
               `${client.emoji.info} \`OwnerId : ${guild.ownerId}\`\n` +
               `${client.emoji.info} \`Membercount : ${guild.memberCount}\`\n`,
           ),
       ],
     });
-  }
+  };
 }
 
 /** @Code-style: Google ( https://google.github.io/styleguide/jsguide.html ) */

@@ -5,11 +5,11 @@
  * © 2024 1sT - Services
  */
 
-import { ButtonStyle, ButtonBuilder, ComponentEmojiResolvable } from "discord.js";
+import { ButtonStyle, ButtonBuilder, ComponentEmojiResolvable } from 'discord.js';
 
 type ButtonOptions = [
   customId: string,
-  label: string,
+  label?: string,
   emoji?: ComponentEmojiResolvable,
   disabled?: boolean,
 ];
@@ -24,7 +24,7 @@ export class ExtendedButtonBuilder extends ButtonBuilder {
     }
 
     const [customId, label, emoji, disabled] = args as ButtonOptions;
-    if (!(label || emoji)) throw new Error("Must provide either label or emoji !");
+    if (!(label || emoji)) throw new Error('Must provide either label or emoji !');
     if (label) this.setLabel(label);
     if (emoji) this.setEmoji(emoji);
     return this.setStyle(style)
